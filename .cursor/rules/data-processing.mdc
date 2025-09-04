@@ -1,0 +1,102 @@
+---
+description: 金融数据获取、清洗和处理规范
+globs:
+  - "data/**/*.py"
+  - "**/data_*.py"
+  - "utils/data*.py"
+alwaysApply: false
+---
+
+# 金融数据处理规范
+
+## 数据获取
+```python
+# 推荐的数据源
+- akshare: 免费的 A 股数据
+- yfinance: Yahoo Finance 数据
+- tushare: 需要积分的专业数据
+- ccxt: 加密货币交易所数据
+- 自建数据库: PostgreSQL/ClickHouse
+
+# 数据获取模板
+class DataProvider:
+    def fetch_daily_data(self, symbol: str, start_date: str, end_date: str) -> pd.DataFrame:
+        """获取日线数据"""
+        # 返回标准化的 DataFrame
+        # columns: ['open', 'high', 'low', 'close', 'volume', 'amount']
+        # index: DatetimeIndex
+        pass
+```
+
+## 数据清洗
+- 处理缺失值
+  - 前向填充 (ffill) 用于价格数据
+  - 0 填充用于成交量
+  - 删除过多缺失值的数据
+  
+- 异常值处理
+  ```python
+  def remove_outliers(df: pd.DataFrame, column: str, n_std: float = 3) -> pd.DataFrame:
+      """使用 n 倍标准差去除异常值"""
+      mean = df[column].mean()
+      std = df[column].std()
+      df = df[(df[column] > mean - n_std * std) & (df[column] < mean + n_std * std)]
+      return df
+  ```
+
+- 数据验证
+  - 检查价格逻辑: high >= low, high >= close, low <= close
+  - 检查时间连续性
+  - 检查数据完整性
+
+## 数据存储
+```python
+# HDF5 存储（适合时间序列）
+store = pd.HDFStore('market_data.h5')
+store.put('daily/stock_000001', df, format='table', data_columns=True)
+
+# Parquet 存储（压缩率高）
+df.to_parquet('data/daily/stock_000001.parquet', engine='pyarrow')
+
+# 数据库存储
+engine = create_engine('postgresql://user:pass@localhost/quant')
+df.to_sql('daily_price', engine, if_exists='append', index=True)
+```
+
+## 特征工程
+```python
+def add_technical_indicators(df: pd.DataFrame) -> pd.DataFrame:
+    """添加技术指标特征"""
+    # 价格特征
+    df['returns'] = df['close'].pct_change()
+    df['log_returns'] = np.log(df['close'] / df['close'].shift(1))
+    
+    # 移动平均
+    for period in [5, 10, 20, 60]:
+        df[f'ma_{period}'] = df['close'].rolling(period).mean()
+        
+    # 波动率
+    df['volatility'] = df['returns'].rolling(20).std()
+    
+    # 成交量特征
+    df['volume_ratio'] = df['volume'] / df['volume'].rolling(20).mean()
+    
+    return df
+```
+
+## 数据更新策略
+- 增量更新：只获取最新数据
+- 定时任务：使用 schedule 或 cron
+- 数据一致性检查
+- 备份机制
+
+## 实时数据处理
+```python
+# WebSocket 数据流处理
+async def process_tick_data(tick):
+    """处理实时 tick 数据"""
+    # 聚合为 K 线
+    # 更新技术指标
+    # 触发交易信号
+    pass
+```

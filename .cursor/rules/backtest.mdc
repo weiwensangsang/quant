@@ -1,0 +1,64 @@
+---
+description: 回测系统开发规范
+globs:
+  - "backtest/**/*.py"
+  - "**/backtest*.py"
+  - "tests/**/test_backtest*.py"
+alwaysApply: false
+---
+
+# 回测系统开发规范
+
+## 回测引擎设计
+- 使用事件驱动架构
+- 支持多品种、多策略回测
+- 实现精确的订单撮合逻辑
+- 考虑实际交易中的各种限制
+
+## 性能指标计算
+```python
+# 必须实现的指标
+- 总收益率 (Total Return)
+- 年化收益率 (Annual Return)
+- 夏普比率 (Sharpe Ratio)
+- 最大回撤 (Max Drawdown)
+- 胜率 (Win Rate)
+- 盈亏比 (Profit/Loss Ratio)
+- 卡玛比率 (Calmar Ratio)
+```
+
+## 交易成本模型
+- 手续费：按成交金额的固定比例
+- 印花税：卖出时收取
+- 滑点：根据订单大小和市场深度计算
+- 冲击成本：大单交易的市场影响
+
+## 数据要求
+- 使用复权价格进行回测
+- 保存每日持仓明细
+- 记录所有交易记录
+- 生成详细的回测报告
+
+## 避免常见陷阱
+- 未来函数：不使用未来数据
+- 幸存者偏差：包含退市股票
+- 数据窥探：严格区分训练集和测试集
+- 过度拟合：使用样本外数据验证
+
+## 回测报告模板
+```python
+# 回测报告应包含
+report = {
+    "summary": {
+        "total_return": float,
+        "annual_return": float,
+        "sharpe_ratio": float,
+        "max_drawdown": float,
+        "win_rate": float,
+    },
+    "trades": pd.DataFrame,  # 所有交易记录
+    "daily_returns": pd.Series,  # 每日收益
+    "positions": pd.DataFrame,  # 每日持仓
+    "equity_curve": pd.Series,  # 权益曲线
+}
+```
