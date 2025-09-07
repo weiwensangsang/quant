@@ -57,11 +57,8 @@ export default function CandlestickPage() {
       <div className="px-4 py-6">
         <div className="mb-6">
           <h1 className="text-3xl font-semibold text-gray-900 mb-2 tracking-tight">
-            A股市场
+            A股
           </h1>
-          <p className="text-base text-gray-600">
-            实时K线图与技术分析
-          </p>
         </div>
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">

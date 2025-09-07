@@ -58,7 +58,7 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
     const volumeData: HistogramData[] = data.map(item => ({
       time: item.date as Time,
       value: item.volume,
-      color: item.close >= item.open ? "#26a69a" : "#ef5350",
+      color: item.close >= item.open ? "rgba(239, 83, 80, 0.5)" : "rgba(38, 166, 154, 0.5)",
     }));
 
     const calculateMA = (period: number) => {
@@ -127,6 +127,12 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
         borderColor: "#eeeeee",
         timeVisible: true,
         secondsVisible: false,
+        fixLeftEdge: true,
+        fixRightEdge: true,
+      },
+      localization: {
+        locale: "zh-CN",
+        dateFormat: "yyyy/MM/dd",
       },
     });
 
@@ -139,14 +145,23 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       borderDownColor: "#26a69a",
       wickUpColor: "#ef5350",
       wickDownColor: "#26a69a",
+      priceScaleId: "right",
     });
     candleSeriesRef.current = candleSeries;
+
+    chart.priceScale("right").applyOptions({
+      scaleMargins: {
+        top: 0.05,
+        bottom: showVolume ? 0.32 : 0.05,
+      },
+    });
 
     const ma5Series = chart.addSeries(LineSeries, {
       color: "#ffeb3b",
       lineWidth: 1,
       crosshairMarkerVisible: false,
       priceLineVisible: false,
+      priceScaleId: "right",
     });
     ma5SeriesRef.current = ma5Series;
 
@@ -155,6 +170,7 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       lineWidth: 1,
       crosshairMarkerVisible: false,
       priceLineVisible: false,
+      priceScaleId: "right",
     });
     ma10SeriesRef.current = ma10Series;
 
@@ -163,12 +179,12 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       lineWidth: 1,
       crosshairMarkerVisible: false,
       priceLineVisible: false,
+      priceScaleId: "right",
     });
     ma30SeriesRef.current = ma30Series;
 
     if (showVolume) {
       const volumeSeries = chart.addSeries(HistogramSeries, {
-        color: "#26a69a",
         priceFormat: {
           type: "volume",
         },
@@ -177,8 +193,8 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
 
       chart.priceScale("volume").applyOptions({
         scaleMargins: {
-          top: 0.8,
-          bottom: 0,
+          top: 0.77,
+          bottom: 0.02,
         },
       });
 
@@ -228,9 +244,6 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
         </div>
       </div>
       <div ref={chartContainerRef} className="w-full" />
-      <div className="absolute bottom-2 right-2 text-xs text-[#7c8798]">
-        由 <a href="https://www.tradingview.com/" target="_blank" rel="noopener noreferrer" className="text-[#509ee3] hover:text-[#4188d1]">TradingView</a> 提供技术支持
-      </div>
     </div>
   );
 };
