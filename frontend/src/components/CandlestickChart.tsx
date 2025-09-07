@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useMemo } from "react";
-import { createChart, CandlestickSeries, LineSeries, HistogramSeries, type IChartApi, type ISeriesApi, type CandlestickData, type HistogramData, type Time } from "lightweight-charts";
-import { sumBy, round } from "lodash";
+import { createChart, CandlestickSeries, HistogramSeries, type IChartApi, type ISeriesApi, type CandlestickData, type HistogramData, type Time } from "lightweight-charts";
 
 export type TimeFrame = "1h" | "4h" | "1d" | "1w" | "1m";
 
@@ -40,11 +39,7 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
 }) => {
   const chartContainerRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
-  const candleSeriesRef = useRef<ISeriesApi<"Candlestick"> | null>(null);
   const volumeSeriesRef = useRef<ISeriesApi<"Histogram"> | null>(null);
-  const ma5SeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
-  const ma10SeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
-  const ma30SeriesRef = useRef<ISeriesApi<"Line"> | null>(null);
 
   const processedData = useMemo(() => {
     const candleData: CandlestickData[] = data.map(item => ({
@@ -61,25 +56,9 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       color: item.close >= item.open ? "rgba(239, 83, 80, 0.5)" : "rgba(38, 166, 154, 0.5)",
     }));
 
-    const calculateMA = (period: number) => {
-      return data.map((_, index) => {
-        if (index < period - 1) return null;
-        const sum = sumBy(data.slice(index - period + 1, index + 1), "close");
-        const dataPoint = data[index];
-        if (!dataPoint) return null;
-        return {
-          time: dataPoint.date as Time,
-          value: round(sum / period, 2),
-        };
-      }).filter(item => item !== null);
-    };
-
     return {
       candles: candleData,
       volume: volumeData,
-      ma5: calculateMA(5),
-      ma10: calculateMA(10),
-      ma30: calculateMA(30),
     };
   }, [data]);
 
@@ -148,7 +127,6 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       wickDownColor: "#26a69a",
       priceScaleId: "right",
     });
-    candleSeriesRef.current = candleSeries;
 
     chart.priceScale("right").applyOptions({
       scaleMargins: {
@@ -156,33 +134,6 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
         bottom: showVolume ? 0.32 : 0.05,
       },
     });
-
-    const ma5Series = chart.addSeries(LineSeries, {
-      color: "#ffeb3b",
-      lineWidth: 1,
-      crosshairMarkerVisible: false,
-      priceLineVisible: false,
-      priceScaleId: "right",
-    });
-    ma5SeriesRef.current = ma5Series;
-
-    const ma10Series = chart.addSeries(LineSeries, {
-      color: "#00bcd4",
-      lineWidth: 1,
-      crosshairMarkerVisible: false,
-      priceLineVisible: false,
-      priceScaleId: "right",
-    });
-    ma10SeriesRef.current = ma10Series;
-
-    const ma30Series = chart.addSeries(LineSeries, {
-      color: "#e91e63",
-      lineWidth: 1,
-      crosshairMarkerVisible: false,
-      priceLineVisible: false,
-      priceScaleId: "right",
-    });
-    ma30SeriesRef.current = ma30Series;
 
     if (showVolume) {
       const volumeSeries = chart.addSeries(HistogramSeries, {
@@ -203,9 +154,6 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
     }
 
     candleSeries.setData(processedData.candles);
-    ma5Series.setData(processedData.ma5 as Array<{time: Time; value: number}>);
-    ma10Series.setData(processedData.ma10 as Array<{time: Time; value: number}>);
-    ma30Series.setData(processedData.ma30 as Array<{time: Time; value: number}>);
 
     if (showVolume && volumeSeriesRef.current) {
       volumeSeriesRef.current.setData(processedData.volume);
@@ -229,19 +177,6 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       <div className="absolute top-2 left-1/2 transform -translate-x-1/2 z-10">
         <div className="flex items-center gap-4 text-sm">
           <span className="text-[#7c8798]">{symbol} - {timeFrameLabels[timeFrame]}</span>
-          <span className="text-[#d0d0d0]">|</span>
-          <span className="flex items-center gap-2">
-            <span className="w-3 h-0.5 bg-yellow-400"></span>
-            <span className="text-[#7c8798]">MA5</span>
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-3 h-0.5 bg-cyan-400"></span>
-            <span className="text-[#7c8798]">MA10</span>
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-3 h-0.5 bg-pink-500"></span>
-            <span className="text-[#7c8798]">MA30</span>
-          </span>
         </div>
       </div>
       <div ref={chartContainerRef} className="w-full" />
