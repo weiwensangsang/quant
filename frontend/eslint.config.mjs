@@ -12,6 +12,24 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    ignores: [
+      "node_modules",
+      ".pnp",
+      ".pnp.js",
+      "coverage",
+      ".next/",
+      "out/",
+      "build/",
+      "dist",
+      ".DS_Store",
+      "*.pem",
+      "*.tsbuildinfo",
+      "next-env.d.ts",
+      "public/sw.js",
+      "public/workbox-*.js",
+    ],
+  },
+  {
     rules: {
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-unused-vars": "error",
