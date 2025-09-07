@@ -100,6 +100,7 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       layout: {
         background: { color: "transparent" },
         textColor: "#7c8798",
+        attributionLogo: false,
       },
       grid: {
         vertLines: { color: "#f0f0f0" },
