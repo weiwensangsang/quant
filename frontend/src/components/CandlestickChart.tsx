@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useRef, useEffect, useMemo } from "react";
-import { createChart, CandlestickSeries, HistogramSeries, type IChartApi, type ISeriesApi, type CandlestickData, type HistogramData, type Time } from "lightweight-charts";
+import { createChart, CandlestickSeries, HistogramSeries, LineSeries, type IChartApi, type ISeriesApi, type CandlestickData, type HistogramData, type LineData, type Time } from "lightweight-charts";
+import _ from "lodash";
 
-export type TimeFrame = "1h" | "4h" | "1d" | "1w" | "1m";
+export type TimeFrame = "1d" | "1w" | "1m";
 
 interface StockData {
   date: string;
@@ -23,11 +24,27 @@ interface CandlestickChartProps {
 }
 
 const timeFrameLabels: Record<TimeFrame, string> = {
-  "1h": "1 Hour",
-  "4h": "4 Hours",
-  "1d": "Daily",
-  "1w": "Weekly",
-  "1m": "Monthly",
+  "1d": "日线",
+  "1w": "周线",
+  "1m": "月线",
+};
+
+const calculateMA = (data: StockData[], period: number): LineData[] => {
+  const result: LineData[] = [];
+
+  for (let i = period - 1; i < data.length; i++) {
+    const sum = _.sumBy(data.slice(i - period + 1, i + 1), item => item.close);
+    const ma = sum / period;
+    const currentData = data[i];
+    if (currentData) {
+      result.push({
+        time: currentData.date as Time,
+        value: _.round(ma, 2),
+      });
+    }
+  }
+
+  return result;
 };
 
 export const CandlestickChart: React.FC<CandlestickChartProps> = ({
@@ -53,12 +70,17 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
     const volumeData: HistogramData[] = data.map(item => ({
       time: item.date as Time,
       value: item.volume,
-      color: item.close >= item.open ? "rgba(239, 83, 80, 0.5)" : "rgba(38, 166, 154, 0.5)",
+      color: item.close >= item.open ? "rgba(239, 83, 80, 0.3)" : "rgba(38, 166, 154, 0.3)",
     }));
+
+    const ma30Data = data.length >= 30 ? calculateMA(data, 30) : [];
+    const ma120Data = data.length >= 120 ? calculateMA(data, 120) : [];
 
     return {
       candles: candleData,
       volume: volumeData,
+      ma30: ma30Data,
+      ma120: ma120Data,
     };
   }, [data]);
 
@@ -82,8 +104,8 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
         attributionLogo: false,
       },
       grid: {
-        vertLines: { color: "#f0f0f0" },
-        horzLines: { color: "#f0f0f0" },
+        vertLines: { color: "#f5f5f5" },
+        horzLines: { color: "#f5f5f5" },
       },
       crosshair: {
         mode: 1,
@@ -102,6 +124,12 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       },
       rightPriceScale: {
         borderColor: "#eeeeee",
+        scaleMargins: {
+          top: 0.05,
+          bottom: 0.05,
+        },
+        mode: 0,
+        autoScale: true,
       },
       timeScale: {
         borderColor: "#eeeeee",
@@ -109,6 +137,9 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
         secondsVisible: false,
         fixLeftEdge: true,
         fixRightEdge: true,
+        barSpacing: 12,
+        rightOffset: 5,
+        minBarSpacing: 8,
       },
       localization: {
         locale: "zh-CN",
@@ -131,7 +162,7 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
     chart.priceScale("right").applyOptions({
       scaleMargins: {
         top: 0.05,
-        bottom: showVolume ? 0.32 : 0.05,
+        bottom: showVolume ? 0.3 : 0.05,
       },
     });
 
@@ -145,7 +176,7 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
 
       chart.priceScale("volume").applyOptions({
         scaleMargins: {
-          top: 0.77,
+          top: 0.75,
           bottom: 0.02,
         },
       });
@@ -159,7 +190,35 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
       volumeSeriesRef.current.setData(processedData.volume);
     }
 
+    if (processedData.ma30.length > 0) {
+      const ma30Series = chart.addSeries(LineSeries, {
+        color: "#FF6B6B",
+        lineWidth: 2,
+        priceScaleId: "right",
+      });
+      ma30Series.setData(processedData.ma30);
+    }
+
+    if (processedData.ma120.length > 0) {
+      const ma120Series = chart.addSeries(LineSeries, {
+        color: "#4ECDC4",
+        lineWidth: 2,
+        priceScaleId: "right",
+      });
+      ma120Series.setData(processedData.ma120);
+    }
+
     chart.timeScale().fitContent();
+    if (data.length > 60) {
+      const to = data[data.length - 1]?.date;
+      const from = data[data.length - 60]?.date;
+      if (from && to) {
+        chart.timeScale().setVisibleRange({
+          from: from as Time,
+          to: to as Time,
+        });
+      }
+    }
 
     window.addEventListener("resize", handleResize);
 
@@ -170,13 +229,23 @@ export const CandlestickChart: React.FC<CandlestickChartProps> = ({
         chartRef.current = null;
       }
     };
-  }, [height, showVolume, processedData]);
+  }, [height, showVolume, processedData, data]);
 
   return (
     <div className="relative">
-      <div className="absolute top-2 left-1/2 transform -translate-x-1/2 z-10">
+      <div className="absolute top-2 left-2 z-10">
         <div className="flex items-center gap-4 text-sm">
-          <span className="text-[#7c8798]">{symbol} - {timeFrameLabels[timeFrame]}</span>
+          <span className="text-[#7c8798] font-medium">{symbol} - {timeFrameLabels[timeFrame]}</span>
+          <div className="flex items-center gap-3 text-xs">
+            <span className="flex items-center gap-1">
+              <span className="inline-block w-3 h-[2px] bg-[#FF6B6B]"></span>
+              <span className="text-gray-600">MA30</span>
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="inline-block w-3 h-[2px] bg-[#4ECDC4]"></span>
+              <span className="text-gray-600">MA120</span>
+            </span>
+          </div>
         </div>
       </div>
       <div ref={chartContainerRef} className="w-full" />

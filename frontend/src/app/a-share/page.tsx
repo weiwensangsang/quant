@@ -41,12 +41,9 @@ const generateMockData = (days: number): StockData[] => {
 
 export default function CandlestickPage() {
   const [timeFrame, setTimeFrame] = useState<TimeFrame>("1d");
-  const [showVolume, setShowVolume] = useState(true);
-  const [data] = useState<StockData[]>(() => generateMockData(100));
+  const [data] = useState<StockData[]>(() => generateMockData(300));
 
   const timeFrameButtons: { value: TimeFrame; label: string }[] = [
-    { value: "1h", label: "1小时" },
-    { value: "4h", label: "4小时" },
     { value: "1d", label: "日线" },
     { value: "1w", label: "周线" },
     { value: "1m", label: "月线" },
@@ -61,39 +58,33 @@ export default function CandlestickPage() {
           </h1>
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex gap-2">
-              {_.map(timeFrameButtons, ({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => setTimeFrame(value)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                    timeFrame === value
-                      ? "bg-blue-600 text-white shadow-sm"
-                      : "bg-gray-50 text-gray-700 hover:bg-gray-100"
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
+        <div className="w-1/2">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div className="mb-4">
+              <div className="flex gap-2">
+                {_.map(timeFrameButtons, ({ value, label }) => (
+                  <button
+                    key={value}
+                    onClick={() => setTimeFrame(value)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                      timeFrame === value
+                        ? "bg-blue-600 text-white shadow-sm"
+                        : "bg-gray-50 text-gray-700 hover:bg-gray-100"
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <button
-              onClick={() => setShowVolume(!showVolume)}
-              className="px-4 py-2 rounded-lg text-sm font-medium bg-gray-50 text-gray-700 hover:bg-gray-100 transition-all"
-            >
-              成交量: {showVolume ? "开启" : "关闭"}
-            </button>
+            <CandlestickChart
+              data={data}
+              symbol="SH000001"
+              timeFrame={timeFrame}
+              height={700}
+            />
           </div>
-
-          <CandlestickChart
-            data={data}
-            symbol="SH000001"
-            timeFrame={timeFrame}
-            showVolume={showVolume}
-            height={600}
-          />
         </div>
       </div>
     </div>
