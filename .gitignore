@@ -57,6 +57,7 @@ coverage/
 workspace/
 logs/
 backend/quant.egg-info/
+backend/scripts/result/
 # backend/uv.lock  # 建议提交，确保依赖版本一致
 
 # Cache
