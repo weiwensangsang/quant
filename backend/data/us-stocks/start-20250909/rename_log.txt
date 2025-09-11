@@ -1,0 +1,478 @@
+美股数据文件重命名日志
+处理时间: 2025-09-11 14:28:22.049684
+备份目录: /Users/zhen/Documents/GitHub/quant/backend/data/us-stocks/start-20250909_backup_rename_20250911_142816
+==================================================
+
+处理统计:
+  总文件数: 12377
+  重命名文件数: 12377
+  失败文件数: 0
+  重复文件数: 412
+
+
+Warrant 目录:
+  DAVEW_Dave Inc Wt.csv -> DAVEW.csv
+  SES_WS_SES AI Corp Wt.csv -> SES.csv
+  OCSAW_Oculis Holding AG Wt.csv -> OCSAW.csv
+  CIFRW_Cipher Mining Inc Wt.csv -> CIFRW.csv
+  JFBRW_Jeffs’ Brands Ltd Wt.csv -> JFBRW.csv
+  CMPOW_CompoSecure Inc Wt.csv -> CMPOW.csv
+  FGIWW_FGI Industries Ltd Wt.csv -> FGIWW.csv
+  LNZAW_LanzaTech Global Inc Wt.csv -> LNZAW.csv
+  BTMWW_Bitcoin Depot Inc Wt.csv -> BTMWW.csv
+  LVROW_Lavoro Ltd Wt.csv -> LVROW.csv
+  OABIW_OmniAb Inc Wt.csv -> OABIW.csv
+  ADVWW_Advantage Solutions Inc Wt.csv -> ADVWW.csv
+  BNCWW_CEA Industries Inc Wt.csv -> BNCWW.csv
+  ABVEW_Above Food Ingredients Inc Wt.csv -> ABVEW.csv
+  PIIIW_P3 Health Partners Inc Wt.csv -> PIIIW.csv
+  SPKLW_Spark I Acquisition Corp Wt.csv -> SPKLW.csv
+  FIGXW_FIGX Capital Acquisition Corp W.csv -> FIGXW.csv
+  GROY_WS_Gold Royalty Corp Wt.csv -> GROY.csv
+  RDZNW_Roadzen Inc Wt.csv -> RDZNW.csv
+  CORZZ_Core Scientific Inc Wt.csv -> CORZZ.csv
+  SYTAW_Siyata Mobile Inc Wt.csv -> SYTAW.csv
+  GIGGW_GigCapital7 Corp Wt.csv -> GIGGW.csv
+  PMTRW_Perimeter Acquisition Corp I Wt.csv -> PMTRW.csv
+  VEEAW_Veea Inc Wt.csv -> VEEAW.csv
+  KWMWW_K Wave Media Ltd Wt.csv -> KWMWW.csv
+  ISRLW_Israel Acquisitions Corp Wt.csv -> ISRLW.csv
+  VAL_WS_Valaris Ltd Wt.csv -> VAL.csv
+  KTTAW_Pasithea Therapeutics Corp Wt.csv -> KTTAW.csv
+  NIXXW_Nixxy Inc Wt.csv -> NIXXW.csv
+  GIBOW_GIBO Holdings Ltd Wt.csv -> GIBOW.csv
+  ZCARW_Zoomcar Holdings Inc Wt.csv -> ZCARW.csv
+  ALVOW_Alvotech Wt.csv -> ALVOW.csv
+  SEATW_Vivid Seats Inc Wt.csv -> SEATW.csv
+  CDROW_Codere Online Luxembourg SA Wt.csv -> CDROW.csv
+  BCGWW_Binah Capital Group Inc Wt.csv -> BCGWW.csv
+  RZLVW_Rezolve AI PLC Wt.csv -> RZLVW.csv
+  ILLRW_Triller Group Inc Wt.csv -> ILLRW.csv
+  LVWR_WS_LiveWire Group Inc Wt.csv -> LVWR.csv
+  PL_WS_Planet Labs PBC Wt.csv -> PL.csv
+  SAIHW_SAIHEAT Ltd Wt.csv -> SAIHW.csv
+  BKSY_WS_BlackSky Technology Inc Wt.csv -> BKSY.csv
+  UKOMW_Ucommune International Ltd Wt.csv -> UKOMW.csv
+  MAPSW_WM Technology Inc Wt.csv -> MAPSW.csv
+  LOKVW_Live Oak Acquisition Corp V Wt.csv -> LOKVW.csv
+  NIOBW_NioCorp Developments Ltd Wt.csv -> NIOBW.csv
+  LPBBW_Launch Two Acquisition Corp Wt.csv -> LPBBW.csv
+  NWTNW_NWTN Inc Wt.csv -> NWTNW.csv
+  JOBY_WS_Joby Aviation Inc Wt.csv -> JOBY.csv
+  GCTS_WS_GCT Semiconductor Holding Inc W.csv -> GCTS.csv
+  ML_WS_MoneyLion Inc Wt.csv -> ML.csv
+  ... 还有 352 个文件
+
+Bond_Note 目录:
+  OXSQG_Oxford Square Capital Corp Note.csv -> OXSQG.csv
+  PRH_Prudential Financial Inc Notes.csv -> PRH.csv
+  SCHI_Schwab 5-10 Year Corporate Bond.csv -> SCHI.csv
+  RILYT_B. Riley Financial Inc Notes.csv -> RILYT.csv
+  GAINI_Gladstone Investment Corp Notes.csv -> GAINI.csv
+  ENJ_Entergy New Orleans LLC Bonds.csv -> ENJ.csv
+  GECCH_Great Elm Capital Corp Notes.csv -> GECCH.csv
+  CTDD_Qwest Corp Notes.csv -> CTDD.csv
+  JLQD_Janus Henderson Corporate Bond .csv -> JLQD.csv
+  PBI_B_Pitney Bowes Inc Notes.csv -> PBI.csv
+  NEAR_iShares Short Duration Bond Act.csv -> NEAR.csv
+  OVM_Overlay Shares Municipal Bond E.csv -> OVM.csv
+  SWKHL_SWK Holdings Corp Note.csv -> SWKHL.csv
+  METCZ_Ramaco Resources Inc Note.csv -> METCZ.csv
+  BC_A_Brunswick Corp Notes.csv -> BC.csv
+  CSWCZ_Capital Southwest Corp Notes.csv -> CSWCZ.csv
+  RSBY_Return Stacked Bonds & Futures .csv -> RSBY.csv
+  SCHJ_Schwab 1-5 Year Corporate Bond .csv -> SCHJ.csv
+  ELC_Entergy Louisiana Inc Bonds.csv -> ELC.csv
+  VCRM_Vanguard Core Tax-Exempt Bond E.csv -> VCRM.csv
+  RILYG_B. Riley Financial Inc Notes.csv -> RILYG.csv
+  IHYF_Invesco High Yield Bond Factor .csv -> IHYF.csv
+  OXSQZ_Oxford Square Capital Corp Note.csv -> OXSQZ.csv
+  BNDS_Infrastructure Capital Bond Inc.csv -> BNDS.csv
+  MFAN_MFA Financial Inc Notes.csv -> MFAN.csv
+  EMBD_Global X Emerging Markets Bond .csv -> EMBD.csv
+  SNCRL_Synchronoss Technologies Note.csv -> SNCRL.csv
+  OXSQH_Oxford Square Capital Corp Note.csv -> OXSQH.csv
+  MYCG_SPDR SSGA My2027 Corporate Bond.csv -> MYCG.csv
+  MYMI_SPDR SSGA My2029 Municipal Bond.csv -> MYMI.csv
+  FGSN_F&G Annuities & Life Inc Notes.csv -> FGSN.csv
+  OVT_Overlay Shares Short Term Bond .csv -> OVT.csv
+  TMUSL_T-Mobile US Inc Notes.csv -> TMUSL.csv
+  SPAB_SPDR Portfolio Aggregate Bond E.csv -> SPAB.csv
+  TRINZ_Trinity Capital Inc Note.csv -> TRINZ.csv
+  HNNAZ_Hennessy Advisors Inc Notes.csv -> HNNAZ.csv
+  BIPI_BIP Bermuda Holdings I Ltd Note.csv -> BIPI.csv
+  PRS_Prudential Financial Inc Notes.csv -> PRS.csv
+  UZD_US Cellular Corp Notes.csv -> UZD.csv
+  SCCG_Sachem Capital Corp Notes.csv -> SCCG.csv
+  RCB_Ready Capital Corp Notes.csv -> RCB.csv
+  OXLCZ_Oxford Lane Capital Corp Notes.csv -> OXLCZ.csv
+  HYSA_BondBloxx USD High Yield Bond S.csv -> HYSA.csv
+  XHYI_BondBloxx USD High Yield Bond I.csv -> XHYI.csv
+  RILYK_B. Riley Financial Inc Notes.csv -> RILYK.csv
+  RWAYZ_Runway Growth Finance Corp Note.csv -> RWAYZ.csv
+  FCRX_Crescent Capital BDC Inc Note.csv -> FCRX.csv
+  FLMB_Franklin Municipal Green Bond E.csv -> FLMB.csv
+  ABXB_Abacus Flexible Bond Leaders ET.csv -> ABXB.csv
+  OXLCL_Oxford Lane Capital Corp Notes.csv -> OXLCL.csv
+  ... 还有 157 个文件
+
+Unit 目录:
+  TACHU_Titan Acquisition Corp Unit Con.csv -> TACHU.csv
+  AIFEU_Aifeex Nexus Acquisition Corp U.csv -> AIFEU.csv
+  CGCTU_Cartesian Growth Corp III Unit .csv -> CGCTU.csv
+  IPODU_Dune Acquisition Corp II Unit C.csv -> IPODU.csv
+  LEGT_U_Legato Merger Corp III Unit Con.csv -> LEGT.csv
+  FACTU_FACT II Acquisition Corp Unit C.csv -> FACTU.csv
+  CHACU_Crane Harbor Acquisition Corp U.csv -> CHACU.csv
+  HVMCU_Highview Merger Corp Unit Cons .csv -> HVMCU.csv
+  PCTTU_PureCycle Technologies Inc Unit.csv -> PCTTU.csv
+  SZZLU_Sizzle Acquisition Corp II Unit.csv -> SZZLU.csv
+  TACOU_Berto Acquisition Corp Unit Con.csv -> TACOU.csv
+  FGMCU_FG Merger II Corp Unit Cons of .csv -> FGMCU.csv
+  PACHU_Pioneer Acquisition I Corp Unit.csv -> PACHU.csv
+  FORLU_Four Leaf Acquisition Corp Unit.csv -> FORLU.csv
+  CCCXU_Churchill Capital Corp X Unit C.csv -> CCCXU.csv
+  YHNAU_YHN Acquisition I Ltd Unit Cons.csv -> YHNAU.csv
+  ORIQU_Origin Investment Corp I Unit C.csv -> ORIQU.csv
+  NMPAU_NMP Acquisition Corp Unit Cons .csv -> NMPAU.csv
+  QSEAU_Quartzsea Acquisition Corp Unit.csv -> QSEAU.csv
+  NOEMU_CO2 Energy Transition Corp Unit.csv -> NOEMU.csv
+  LWACU_LightWave Acquisition Corp Unit.csv -> LWACU.csv
+  SBXD_U_SilverBox Corp IV Unit Cons of .csv -> SBXD.csv
+  AACBU_Artius II Acquisition Inc Unit .csv -> AACBU.csv
+  CLBR_U_Colombier Acquisition Corp II U.csv -> CLBR.csv
+  ATMCU_AlphaTime Acquisition Corp Unit.csv -> ATMCU.csv
+  PAII_U_Pyrophyte Acquisition Corp II U.csv -> PAII.csv
+  MAYAU_Maywood Acquisition Corp Unit C.csv -> MAYAU.csv
+  INACU_Indigo Acquisition Corp Unit Co.csv -> INACU.csv
+  MACIU_Melar Acquisition Corp I Unit C.csv -> MACIU.csv
+  SIMAU_SIM Acquisition Corp I Unit Con.csv -> SIMAU.csv
+  VACHU_Voyager Acquisition Corp Unit C.csv -> VACHU.csv
+  ATMVU_AlphaVest Acquisition Corp Unit.csv -> ATMVU.csv
+  DYCQU_DT Cloud Acquisition Corp Unit .csv -> DYCQU.csv
+  MKLYU_McKinley Acquisition Corp Unit .csv -> MKLYU.csv
+  ALFUU_Centurion Acquisition Corp Unit.csv -> ALFUU.csv
+  HCMAU_HCM III Acquisition Corp Unit C.csv -> HCMAU.csv
+  SDHIU_Siddhi Acquisition Corp Unit Co.csv -> SDHIU.csv
+  OZ_Belpointe PREP LLC Unit-A.csv -> OZ.csv
+  EWUS_iShares MSCI United Kingdom Sma.csv -> EWUS.csv
+  EGHAU_EGH Acquisition Corp Unit Cons .csv -> EGHAU.csv
+  YORKU_Yorkville Acquisition Corp Unit.csv -> YORKU.csv
+  SOUL_U_Soulpower Acquisition Corp Unit.csv -> SOUL.csv
+  RFAIU_RF Acquisition Corp II Unit Con.csv -> RFAIU.csv
+  PLMKU_Plum Acquisition Corp IV Unit C.csv -> PLMKU.csv
+  LRGF_iShares Edge MSCI Multifactor U.csv -> LRGF.csv
+  GIGGU_GigCapital7 Corp Unit Cons of 1.csv -> GIGGU.csv
+  DYNXU_Dynamix Corp Unit Cons of 1 CL .csv -> DYNXU.csv
+  ONCHU_1RT Acquisition Corp Unit Cons .csv -> ONCHU.csv
+  CCU_智利CCU.csv -> CCU.csv
+  YOTAU_Yotta Acquisition Corp Unit Con.csv -> YOTAU.csv
+  ... 还有 47 个文件
+
+Fund_Trust 目录:
+  PAXS_PIMCO Access Income Fund.csv -> PAXS.csv
+  BWEB_Bitwise Funds Trust Bitwise Web.csv -> BWEB.csv
+  HYLS_First Trust Tactical High Yield.csv -> HYLS.csv
+  FTSL_First Trust Senior Loan Fund ET.csv -> FTSL.csv
+  RMT_Royce Micro-Cap Trust.csv -> RMT.csv
+  PCM_PCM Fund.csv -> PCM.csv
+  DBE_Invesco DB Energy Fund.csv -> DBE.csv
+  MVT_BlackRock MuniVest Fund II.csv -> MVT.csv
+  SWZ_Total Return Securities Fund.csv -> SWZ.csv
+  LEGR_First Trust Indxx Innovative Tr.csv -> LEGR.csv
+  FTXN_First Trust Nasdaq Oil & Gas ET.csv -> FTXN.csv
+  DHCNI_Diversified Healthcare Trust No.csv -> DHCNI.csv
+  FEP_First Trust Europe AlphaDEX Fun.csv -> FEP.csv
+  FPE_First Trust Preferred Securitie.csv -> FPE.csv
+  TRND_Pacer Trendpilot Fund of Funds .csv -> TRND.csv
+  IFN_The India Fund.csv -> IFN.csv
+  FTXR_First Trust Nasdaq Transportati.csv -> FTXR.csv
+  RWT_Redwood Trust Inc.csv -> RWT.csv
+  FNDC_Schwab Fundamental Internationa.csv -> FNDC.csv
+  MFLX_First Trust Flexible Municipal .csv -> MFLX.csv
+  LDSF_First Trust Low Duration Strate.csv -> LDSF.csv
+  NYMTI_New York Mortgage Trust Inc Not.csv -> NYMTI.csv
+  GJT_STRATS Trust for Allstate Corp .csv -> GJT.csv
+  FSCS_First Trust SMID Capital Streng.csv -> FSCS.csv
+  FTA_First Trust Large Cap Value Alp.csv -> FTA.csv
+  FCA_First Trust China AlphaDEX Fund.csv -> FCA.csv
+  FNX_First Trust Mid Cap Core AlphaD.csv -> FNX.csv
+  PEO_Adams Natural Resources Fund.csv -> PEO.csv
+  GPMT_A_Granite Point Mortgage Trust In.csv -> GPMT.csv
+  WEA_Western Asset Premier Bond Fund.csv -> WEA.csv
+  TIPC_Northern Trust 2045 Inflation-L.csv -> TIPC.csv
+  TAXT_Northern Trust Tax-Exempt Bond .csv -> TAXT.csv
+  MVF_BlackRock MuniVest Fund.csv -> MVF.csv
+  GLQ_Clough Global Equity Fund.csv -> GLQ.csv
+  WCBR_WisdomTree Cybersecurity Fund.csv -> WCBR.csv
+  DDIV_First Trust Dorsey Wright Momen.csv -> DDIV.csv
+  FAI_First Trust Bloomberg Artificia.csv -> FAI.csv
+  EFIX_First Trust TCW Emerging Market.csv -> EFIX.csv
+  RFDI_First Trust RiverFront Dynamic .csv -> RFDI.csv
+  CHCT_Community Healthcare Trust Inc.csv -> CHCT.csv
+  JGH_Nuveen Global High Income Fund.csv -> JGH.csv
+  NBH_Neuberger Berman Municipal Fund.csv -> NBH.csv
+  WCLD_WisdomTree Cloud Computing Fund.csv -> WCLD.csv
+  GUT_C_The Gabelli Utility Trust Serie.csv -> GUT.csv
+  GJO_STRATS Trust For Wal-Mart Store.csv -> GJO.csv
+  OPINL_Office Properties Income Trust .csv -> OPINL.csv
+  BME_BlackRock Health Sciences Trust.csv -> BME.csv
+  MUNB_Northern Trust 2035 Tax-Exempt .csv -> MUNB.csv
+  FRT_C_Federal Realty Investment Trust.csv -> FRT.csv
+  DWAT_Arrow Investments Trust Arrow D.csv -> DWAT.csv
+  ... 还有 397 个文件
+
+Preferred 目录:
+  PRIF_J_Priority Income Fund Inc Series.csv -> PRIF.csv
+  BFS_D_Saul Centers Inc Series D Pfd.csv -> BFS.csv
+  PSA_G_Public Storage Series G Pfd.csv -> PSA.csv
+  RC_C_Ready Capital Corp Series C Pfd.csv -> RC.csv
+  STRRP_Star Equity Holdings Inc Series.csv -> STRRP.csv
+  EFC_B_Ellington Financial Inc Series .csv -> EFC.csv
+  PSA_K_Public Storage Series K Pfd.csv -> PSA_1.csv
+  PSA_O_Public Storage Series O Pfd.csv -> PSA_2.csv
+  ASB_F_Associated Banc-Corp Series F P.csv -> ASB.csv
+  AGNCN_AGNC Investment Corp Series C P.csv -> AGNCN.csv
+  ARES_B_Ares Management Corp Series B P.csv -> ARES.csv
+  LOB_A_Live Oak Bancshares Inc Series .csv -> LOB.csv
+  RF_C_Regions Financial Corp Series C.csv -> RF.csv
+  AMH_H_American Homes 4 Rent Series H .csv -> AMH.csv
+  WAFDP_Washington Federal Inc Series A.csv -> WAFDP.csv
+  LANDP_Gladstone Land Corp Series C Pf.csv -> LANDP.csv
+  ABR_D_Arbor Realty Trust Inc Series D.csv -> ABR.csv
+  OXLCN_Oxford Lane Capital Corp Series.csv -> OXLCN.csv
+  GNL_E_Global Net Lease Inc Series E P.csv -> GNL.csv
+  CTA_B_EIDP Inc Pfd.csv -> CTA.csv
+  FRMEP_First Merchants Corp Series A P.csv -> FRMEP.csv
+  SCE_M_SCE Trust VII Pfd.csv -> SCE.csv
+  RILYP_B. Riley Financial Inc Series A.csv -> RILYP.csv
+  TECTP_Tectonic Financial Inc Series B.csv -> TECTP.csv
+  CBTJ_Calamos Bitcoin 80 Series Struc.csv -> CBTJ.csv
+  BAC_B_Bank of America Corp Series GG .csv -> BAC.csv
+  WBS_G_Webster Financial Corp Series G.csv -> WBS.csv
+  STRC_Strategy Inc Series A Pfd.csv -> STRC.csv
+  USB_S_US Bancorp Series O Pfd.csv -> USB.csv
+  USB_H_US Bancorp Series B Pfd.csv -> USB_1.csv
+  DLNG_B_Dynagas LNG Partners LP Series .csv -> DLNG.csv
+  MS_L_Morgan Stanley Series L Pfd.csv -> MS.csv
+  PCG_D_Pacific Gas and Electric Co Pfd.csv -> PCG.csv
+  FITBI_Fifth Third Bancorp Series I Pf.csv -> FITBI.csv
+  BAC_K_Bank of America Corp Series HH .csv -> BAC_1.csv
+  STRC_MicroStrategy Inc Series A Pfd.csv -> STRC_1.csv
+  SR_A_Spire Inc Series A Pfd.csv -> SR.csv
+  FLG_A_Flagstar Financial Inc Series A.csv -> FLG.csv
+  EFC_A_Ellington Financial Inc Series .csv -> EFC_1.csv
+  CDZIP_Cadiz Inc Series A Pfd.csv -> CDZIP.csv
+  CDR_C_Cedar Realty Trust Inc Series C.csv -> CDR.csv
+  ALTG_A_Alta Equipment Group Series A P.csv -> ALTG.csv
+  CMS_B_CMS Energy Corp Pfd.csv -> CMS.csv
+  MET_E_MetLife Inc Series E Pfd.csv -> MET.csv
+  PCG_H_Pacific Gas and Electric Co Pfd.csv -> PCG_1.csv
+  KEY_I_KeyCorp Series E Pfd.csv -> KEY.csv
+  USB_R_US Bancorp Series M Pfd.csv -> USB_2.csv
+  PRIF_I_Priority Income Fund Inc Series.csv -> PRIF_1.csv
+  BANFP_BancFirst Corp Pfd.csv -> BANFP.csv
+  BAC_P_Bank of America Corp Series PP .csv -> BAC_2.csv
+  ... 还有 310 个文件
+
+ADR_ADS 目录:
+  TMH_Toyota Motor Corporation ADRhed.csv -> TMH.csv
+  TM_丰田汽车(US ADR).csv -> TM.csv
+  AKO_B_Embotelladora Andina SA ADR-B.csv -> AKO.csv
+  HCM_和黄医药(US ADR).csv -> HCM.csv
+  RYAAY_瑞安航空(US ADR).csv -> RYAAY.csv
+  LYG_劳埃德银行(US ADR).csv -> LYG.csv
+  HSBH_HSBC Holdings plc ADRhedged.csv -> HSBH.csv
+  AKO_A_Embotelladora Andina SA ADR-A.csv -> AKO_1.csv
+  SAPH_SAP SE ADRhedged.csv -> SAPH.csv
+  WPP_WPP集团(US ADR).csv -> WPP.csv
+  STHH_STMicroelectronics NV ADRhedged.csv -> STHH.csv
+  ARMH_Arm Holdings PLC ADRhedged.csv -> ARMH.csv
+  AZN_阿斯利康(US ADR).csv -> AZN.csv
+  ASMH_ASML Holding NV ADRhedged.csv -> ASMH.csv
+  BPH_BP plc ADRhedged.csv -> BPH.csv
+  SHEH_Shell plc ADRhedged.csv -> SHEH.csv
+  DEO_帝亚吉欧(US ADR).csv -> DEO.csv
+  CUK_嘉年华邮轮(US ADR).csv -> CUK.csv
+  GSKH_GSK plc ADRhedged.csv -> GSKH.csv
+  BHP_必和必拓(US ADR).csv -> BHP.csv
+  AZNH_AstraZeneca PLC ADRhedged.csv -> AZNH.csv
+  IONR_ioneer Ltd ADS.csv -> IONR.csv
+
+Rights 目录:
+  ATMVR_AlphaVest Acquisition Corp Rt.csv -> ATMVR.csv
+  MOB_Mobilicom Ltd ADR.csv -> MOB.csv
+  BBRE_JPMorgan BetaBuilders MSCI US R.csv -> BBRE.csv
+  VIST_Vista Energy SAB de CV ADR.csv -> VIST.csv
+  SLN_Silence Therapeutics plc ADR.csv -> SLN.csv
+  OAKUR_Oak Woods Acquisition Corp Rt.csv -> OAKUR.csv
+  GNFT_Genfit SA ADR.csv -> GNFT.csv
+  ELVR_Sayona Mining Ltd ADR.csv -> ELVR.csv
+  OBOR_KraneShares MSCI One Belt One R.csv -> OBOR.csv
+  TAVIR_Tavia Acquisition Corp Rt.csv -> TAVIR.csv
+  MESO_Mesoblast Ltd ADR.csv -> MESO.csv
+  BWAY_Brainsway Ltd ADR.csv -> BWAY.csv
+  RGTX_Defiance Daily Target 2X Long R.csv -> RGTX.csv
+  BHKr_BlackRock Core Bond Trust Rt.csv -> BHKr.csv
+  JACSr_Jackson Acquisition Co II Rt.csv -> JACSr.csv
+  GNTA_Genenta Science SpA ADR.csv -> GNTA.csv
+  ABVX_Abivax SA ADR.csv -> ABVX.csv
+  NVA_Nova Minerals Ltd ADR.csv -> NVA.csv
+  AZUL_Azul SA ADR.csv -> AZUL.csv
+  YHNAR_YHN Acquisition I Ltd Rt.csv -> YHNAR.csv
+  BKHAR_Black Hawk Acquisition Corp Rt.csv -> BKHAR.csv
+  RKLX_Defiance Daily Target 2X Long R.csv -> RKLX.csv
+  TLX_Telix Pharmaceuticals Ltd ADR.csv -> TLX.csv
+  IPX_IperionX Ltd ADR.csv -> IPX.csv
+  QETAR_Quetta Acquisition Corp Rt.csv -> QETAR.csv
+  HYHG_ProShares High Yield Interest R.csv -> HYHG.csv
+  SOGP_Sound Group Inc ADR.csv -> SOGP.csv
+  BDRX_Biodexa Pharmaceuticals PLC ADR.csv -> BDRX.csv
+  CIB_Grupo Cibest SA ADR.csv -> CIB.csv
+  ADXN_Addex Therapeutics Ltd ADR.csv -> ADXN.csv
+  SOULr_Soulpower Acquisition Corp Rt.csv -> SOULr.csv
+  GLDM_黄金MiniShares信托-SPDR.csv -> GLDM.csv
+  COLAR_Columbus Acquisition Corp Rt.csv -> COLAR.csv
+  NBTX_Nanobiotix SA ADR.csv -> NBTX.csv
+  TBMCR_Trailblazer Merger Corp I Rt.csv -> TBMCR.csv
+  AHG_Akso Health Group ADR.csv -> AHG.csv
+  ENIC_Enel Chile SA ADR.csv -> ENIC.csv
+  LTM_LATAM Airlines Group SA ADR.csv -> LTM.csv
+  LUXE_LuxExperience BV ADR.csv -> LUXE.csv
+  WTGUR_Wintergreen Acquisition Corp Rt.csv -> WTGUR.csv
+  JVSAR_JVSPAC Acquisition Corp Rt.csv -> JVSAR.csv
+  FISR_SPDR SSGA Fixed Income Sector R.csv -> FISR.csv
+  ATHE_Alterity Therapeutics Ltd ADR.csv -> ATHE.csv
+  XYLO_Xylo Technologies Ltd ADR.csv -> XYLO.csv
+  BMA_Banco Macro SA ADR.csv -> BMA.csv
+  TURB_Turbo Energy SA ADR.csv -> TURB.csv
+  SCDr_LMP Capital and Income Fund Rt.csv -> SCDr.csv
+  XHG_XChange TEC INC ADR.csv -> XHG.csv
+  FGMCR_FG Merger II Corp Rt.csv -> FGMCR.csv
+  CPAC_Cementos Pacasmayo SAA ADR.csv -> CPAC.csv
+  ... 还有 137 个文件
+
+Common_Stock 目录:
+  SNPS_新思科技.csv -> SNPS.csv
+  TCPC_BlackRock TCP Capital Corp.csv -> TCPC.csv
+  GT_固特异轮胎橡胶.csv -> GT.csv
+  VNOM_Viper Energy Inc-A.csv -> VNOM.csv
+  CCIRU_Cohen Circle Acquisition Corp I.csv -> CCIRU.csv
+  JANM_FT Vest U.S. Equity Max Buffer .csv -> JANM.csv
+  STRT_STRATTEC SECURITY CORP.csv -> STRT.csv
+  CFSB_CFSB Bancorp Inc.csv -> CFSB.csv
+  OKUR_OnKure Therapeutics Inc-A.csv -> OKUR.csv
+  NDAQ_纳斯达克.csv -> NDAQ.csv
+  MARU_AllianzIM U.S. Equity Buffer15 .csv -> MARU.csv
+  WTMY_WisdomTree High Income Laddered.csv -> WTMY.csv
+  ENPH_Enphase Energy Inc.csv -> ENPH.csv
+  KURA_Kura Oncology Inc.csv -> KURA.csv
+  FFWM_First Foundation Inc.csv -> FFWM.csv
+  OOTO_Direxion Daily Travel & Vacatio.csv -> OOTO.csv
+  SEED_奥瑞金种业.csv -> SEED.csv
+  PATK_Patrick Industries Inc.csv -> PATK.csv
+  LVRO_Lavoro Ltd-A.csv -> LVRO.csv
+  LCCCU_Lakeshore Acquisition III Corp .csv -> LCCCU.csv
+  CMTL_康姆泰克通讯.csv -> CMTL.csv
+  HFRO_A_Highland Opportunities and Inco.csv -> HFRO.csv
+  SYPR_Sypris Solutions Inc.csv -> SYPR.csv
+  CMLS_Cumulus Media Inc-A.csv -> CMLS.csv
+  MFEM_PIMCO RAFI Dynamic Multi-Factor.csv -> MFEM.csv
+  NCPL_Netcapital Inc.csv -> NCPL.csv
+  LIAU_LifeX 2060 Inflation-Protected .csv -> LIAU.csv
+  KRUS_Kura Sushi USA Inc-A.csv -> KRUS.csv
+  GAIN_格拉德斯通投资.csv -> GAIN.csv
+  RTACW_Renatus Tactical Acquisition Co.csv -> RTACW.csv
+  TG_特里迪加.csv -> TG.csv
+  FERAU_Fifth Era Acquisition Corp I Un.csv -> FERAU.csv
+  APO_A_Apollo Global Management Inc Se.csv -> APO.csv
+  NEM_纽蒙特.csv -> NEM.csv
+  INSE_Inspired Entertainment Inc.csv -> INSE.csv
+  NFXL_Direxion Daily NFLX Bull 2X Sha.csv -> NFXL.csv
+  VFS_VinFast Auto Ltd.csv -> VFS.csv
+  PIEQ_Principal International Equity .csv -> PIEQ.csv
+  LCF_Touchstone US Large Cap Focused.csv -> LCF.csv
+  OFG_OFG Bancorp.csv -> OFG.csv
+  RGP_Resources Connection Inc.csv -> RGP.csv
+  VNME_Vendome Acquisition Corp I-A.csv -> VNME.csv
+  TGE_The Generation Essentials Group.csv -> TGE.csv
+  KAR_OPENLANE Inc.csv -> KAR.csv
+  MYN_BlackRock MuniYield New York Qu.csv -> MYN.csv
+  LFWD_Lifeward Ltd.csv -> LFWD.csv
+  EPC_Edgewell Personal Care Co.csv -> EPC.csv
+  RFIL_RF Industries Ltd.csv -> RFIL.csv
+  SPME_Sound Point Meridian Capital In.csv -> SPME.csv
+  JMEE_JPMorgan Small & Mid Cap Enhanc.csv -> JMEE.csv
+  ... 还有 8787 个文件
+
+ETF 目录:
+  IWB_罗素1000指数ETF-iShares.csv -> IWB.csv
+  MFUL_Mindful Conservative ETF.csv -> MFUL.csv
+  MDYV_SPDR S&P 400 Mid Cap Value ETF.csv -> MDYV.csv
+  DUKQ_Ocean Park Domestic ETF.csv -> DUKQ.csv
+  KBWY_高股息房地产信托ETF-PowerShares.csv -> KBWY.csv
+  PQJL_PGIM Nasdaq-100 Buffer 12 ETF -.csv -> PQJL.csv
+  IGOV_iShares 安硕全球国债ETF.csv -> IGOV.csv
+  FDRR_Fidelity Dividend ETF for Risin.csv -> FDRR.csv
+  VAMO_Cambria ETF Trust Cambria Value.csv -> VAMO.csv
+  QQQ_纳斯达克100ETF-Invesco.csv -> QQQ.csv
+  GGLL_二倍做多谷歌ETF-Direxion.csv -> GGLL.csv
+  FCOR_Fidelity Corporate Bond ETF.csv -> FCOR.csv
+  PBAU_PGIM S&P 500 Buffer 20 ETF - Au.csv -> PBAU.csv
+  RTH_零售ETF-VanEck Vectors.csv -> RTH.csv
+  TSLL_二倍做多特斯拉ETF-Direxion.csv -> TSLL.csv
+  ABFL_Abacus FCF Leaders ETF.csv -> ABFL.csv
+  VONG_罗素1000成长指数ETF-Vanguard.csv -> VONG.csv
+  TAIL_Cambria Tail Risk ETF.csv -> TAIL.csv
+  UYLD_Angel Oak UltraShort Income ETF.csv -> UYLD.csv
+  ASCE_Allspring SMID Core ETF.csv -> ASCE.csv
+  IWD_罗素1000价值指数ETF-iShares.csv -> IWD.csv
+  PFFD_Global X U.S. Preferred ETF.csv -> PFFD.csv
+  OACP_OneAscent Core Plus Bond ETF.csv -> OACP.csv
+  SPY_标普500ETF-SPDR.csv -> SPY.csv
+  MAGG_Madison Aggregate Bond ETF.csv -> MAGG.csv
+  MORT_VanEck Mortgage REIT Income ETF.csv -> MORT.csv
+  WZRD_Opportunistic Trader ETF.csv -> WZRD.csv
+  EZBC_Franklin Bitcoin ETF.csv -> EZBC.csv
+  KCE_SPDR S&P Capital Markets ETF.csv -> KCE.csv
+  TACK_Fairlead Tactical Sector ETF.csv -> TACK.csv
+  QQQE_纳斯达克100平均加权指数ETF-Dire.csv -> QQQE.csv
+  HOLD_Harbor Alpha Layering ETF.csv -> HOLD.csv
+  AVGG_二倍做多博通ETF-Leverage.csv -> AVGG.csv
+  KNO_AXS Knowledge Leaders ETF.csv -> KNO.csv
+  LQD_债券指数ETF-iShares iBoxx投资级.csv -> LQD.csv
+  EWK_比利时ETF-iShares MSCI.csv -> EWK.csv
+  DVXC_WEBs Defined Volatility XLC ETF.csv -> DVXC.csv
+  ICVT_iShares Convertible Bond ETF.csv -> ICVT.csv
+  FCG_天然气ETF-First Trust.csv -> FCG.csv
+  VONE_Vanguard Russell 1000 ETF.csv -> VONE.csv
+  IHY_国际高收益债ETF-Market Vectors.csv -> IHY.csv
+  VIXM_Proshares VIX 中期期货ETF.csv -> VIXM.csv
+  BDGS_Bridges Capital Tactical ETF.csv -> BDGS.csv
+  SVXY_做空恐慌指数期货短期合约ETF.csv -> SVXY.csv
+  CONI_二倍做空Coinbase ETF-GraniteSha.csv -> CONI.csv
+  IWO_罗素2000成长股ETF-iShares.csv -> IWO.csv
+  SNAV_Mohr Sector Nav ETF.csv -> SNAV.csv
+  DUSA_Davis Select U.S. Equity ETF.csv -> DUSA.csv
+  SPWO_SP Funds S&P World (ex-US) ETF.csv -> SPWO.csv
+  TOPT_iShares Top 20 U.S. Stocks ETF.csv -> TOPT.csv
+  ... 还有 1751 个文件
+
+ETN 目录:
+  UCIB_ETRACS CMCI Total Return ETN Se.csv -> UCIB.csv
+  VXZ_恐慌指数期货中期合约ETN-iPath.csv -> VXZ.csv
+  DJP_大宗商品ETN-iPath.csv -> DJP.csv
+  ETN_伊顿.csv -> ETN.csv
+  JETU_MAX Airlines 3X Leveraged ETNs.csv -> JETU.csv
+  AMUB_ETRACS Alerian MLP Index ETN Se.csv -> AMUB.csv
+  FNGS_MicroSectors FANG+ ETNs.csv -> FNGS.csv
+  DZZ_二倍做空黄金ETN-DB.csv -> DZZ.csv
+  GRN_iPath Series B Carbon ETN.csv -> GRN.csv
+  ATMP_iPath Select MLP ETN.csv -> ATMP.csv
+  ETNB_89bio Inc.csv -> ETNB.csv
+  DGP_二倍做多黄金ETN-DB.csv -> DGP.csv
+  SPYU_MAX S&P 500 4X Leveraged ETNs.csv -> SPYU.csv
+  VXX_恐慌指数期货短期合约ETN-iPath.csv -> VXX.csv
+  DGZ_做空黄金ETN-DB.csv -> DGZ.csv
+  AMJB_JP Morgan Alerian MLP Index ETN.csv -> AMJB.csv
+  FNGU_三倍做多FANG+指数ETN-MicroSecto.csv -> FNGU.csv

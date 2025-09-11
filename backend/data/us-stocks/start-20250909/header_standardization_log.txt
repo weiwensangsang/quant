@@ -1,0 +1,22 @@
+美股数据表头标准化日志
+处理时间: 2025-09-11 14:25:40.304334
+备份目录: /Users/zhen/Documents/GitHub/quant/backend/data/us-stocks/start-20250909_backup_20250911_142309
+==================================================
+
+表头映射:
+  日期 -> trade_date
+  开盘价 -> open
+  收盘价 -> close
+  最高价 -> high
+  最低价 -> low
+  成交量(手) -> volume
+  成交额(元) -> amount
+  振幅(%) -> amplitude
+  涨跌幅(%) -> pct_change
+  涨跌额(美元) -> change
+  换手率(%) -> turnover_rate
+
+处理结果:
+  总文件数: 12377
+  成功处理: 12377
+  失败文件: 0

@@ -1,0 +1,3 @@
+trade_date,open,close,high,low,volume,amount,amplitude,pct_change,change,turnover_rate
+20250903,25.0,25.0,25.0,24.86,11170,279040.0,1.06,89.08,11.778,0.0
+20250904,24.95,24.98,25.0,24.95,17118,427796.0,0.2,-0.08,-0.02,0.0
